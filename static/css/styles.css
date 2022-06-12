@@ -1,12 +1,16 @@
 *{
-padding: 0;
-margin: 0;
-box-sizing: border box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border box;
 }
 body{
-background-color: #212121;
-color: white;
+    background-color: #212121;
+    color: white;
 }
 form{
-color: black;
+    color: black;
+}
+.account-img {
+    height: 125px;
+    width: 125px;
 }
