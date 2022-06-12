@@ -1,13 +1,14 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import SignupForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 # Create your views here.
 @login_required(login_url='login')
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'rate/index.html')
 
 
 def signup(request):
@@ -28,3 +29,13 @@ def signup(request):
 @login_required(login_url='login')
 def profile(request, username):
     return render(request, 'profile.html')
+
+
+def user_profile(request, username):
+    user_prof = get_object_or_404(User, username=username)
+    if request.user == user_prof:
+        return redirect('profile', username=request.user.username)
+    context = {
+        'user_prof': user_prof,
+    }
+    return render(request, 'rate/userprofile.html', context)
