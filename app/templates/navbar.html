@@ -32,8 +32,10 @@
                                     <a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
                             </li>
                         </ul>
-                        <form class="form-inline mr-auto" target="_self">
-                            <div class="form-group"><input class="form-control search-field" type="search" name="search" id="search-field">
+                        <form class="form-inline mr-auto" target="_self" method="get" action="{% url 'search' %}">
+                            <div class="form-group">
+                                {% csrf_token %}
+                                <input class="form-control search-field" placeholder="Search" type="text" name="title" id="search-field">
                                 <label for="search-field"><i class="fa fa-search"></i></label>
                             </div>
                         </form>
