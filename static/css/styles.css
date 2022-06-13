@@ -254,6 +254,9 @@ form{
   font-family: "Roboto", sans-serif;
   color: #10182f;
 }
+.form-group{
+    color: white;
+}
 
 .container {
   display: flex;
