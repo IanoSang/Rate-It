@@ -83,3 +83,19 @@ def edit_profile(request, username):
         'prof_form': prof_form
     }
     return render(request, 'rate/edit.html', context)
+
+
+def search_project(request):
+    if request.method == 'GET':
+        title = request.GET.get("title")
+        results = Post.objects.filter(title__icontains=title).all()
+        print(results)
+        message = f'name'
+        context = {
+            'results': results,
+            'message': message
+        }
+        return render(request, 'rate/results.html', context)
+    else:
+        message = "You haven't searched for any Projects"
+    return render(request, 'results.html', {'message': message})
