@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'crispy_forms',
     'cloudinary',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
