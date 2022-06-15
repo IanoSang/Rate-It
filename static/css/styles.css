@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border box;
 }
+html, body{
+        overflow-x: hidden;
+    }
 #nbar{
     background-color:black;
     color:black;
