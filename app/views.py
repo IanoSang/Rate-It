@@ -6,6 +6,10 @@ from .models import *
 from django.contrib.auth.models import User
 import random
 from django.http import HttpResponseRedirect
+from .serializer import ProfileSerializer, PostSerializer
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
 
 
 # Create your views here.
@@ -146,3 +150,28 @@ def project(request, post):
 
     }
     return render(request, 'rate/project.html', context)
+
+
+@login_required(login_url='login')
+@api_view(['GET', 'POST'])
+def profile_list(request):
+    if request.method == 'GET':
+        profile = Profile.objects.all()
+        serializer = ProfileSerializer(profile, many=True)
+        return Response(serializer.data)
+
+    if request.method == 'POST':
+        serializer = ProfileSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status.HTTP_201.CREATED)
+
+
+@login_required(login_url='login')
+@api_view(['GET', 'POST'])
+def post_list(request):
+    if request.method == 'GET':
+        post = Post.objects.all()
+        serializer = PostSerializer(post, many=True)
+        return Response(serializer.data)
