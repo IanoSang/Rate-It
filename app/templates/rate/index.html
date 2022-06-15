@@ -1,7 +1,6 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block content%}
-<h2 class="text-center"> Holla {{request.user}}</h2>
 <div class="container-fluid" id="body-content">
     <div class="container">
 
@@ -12,7 +11,9 @@
           <img src="{{ post.photo.url }}" alt="{{photo.title}}" />
         </div>
         <div class="card-body">
-          <span class="tag tag-purple">{{post.title|title}}</span>
+          <span class="tag tag-purple">
+              <a href="{% url 'project' post.title %}"> {{post.title|title}}</a>
+          </span>
           <h4 class="pull-right">
             <a class="btn btn-sm btn-outline-info float-right" href="{{ post.url }}" style=""> View</a>
           </h4>
