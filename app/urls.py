@@ -6,7 +6,8 @@ from rest_framework import routers
 from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.home, name='home'),
+    path('index/', views.index, name='index'),
     path('signup/', views.signup, name='signup'),
     path('account/', include('django.contrib.auth.urls')),
     path('profile/<username>/', views.profile, name='profile'),

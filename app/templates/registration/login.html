@@ -7,16 +7,20 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="card" style="margin-top:14%; padding:20px">
+                    <h4 class="text-center">LOGIN HERE</h4>
                     <div class="card-body">
-                        <h5 class="card-title"><a>Sign in to continue</a> <span style="float:right">Not a member yet? <a
-                                href="{% url 'signup' %}" class="text-info">Register now</a></span></h5>
                         <div class="card-text">
                             <form action="" method="post" novalidate >
                                 {% csrf_token%}
                                 {{ form|crispy}}
-                                <button type="submit" class="btn btn-info btn-sm">Login</button>
+                                <div class="text-center mt-2">
+                                    <button type="submit" class="btn btn-info btn-sm">Login</button>
+                                </div>
                             </form>
                         </div>
+                         <h5 class="card-title"><a>Sign in to continue</a> <span style="float:right">Not a member yet? <a
+                                href="{% url 'signup' %}" class="text-info">Register now</a></span>
+                         </h5>
                     </div>
                 </div>
 

@@ -5,8 +5,9 @@
     <h5 class="mb-4 mt-4">{{ post.title }} by {{ post.user.username }} from {{ post.user.profile.location }} <span
             id="heart"> <i class="fas fa-heart"></i></span></h5>
 
-    <div class="card">
-        <div class="view overlay" style="background-image:url({{ post.photo.url }})">
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <div class="view overlay" style="background-image:url({{ post.photo.url }})">
             <img class="card-img-top" style="visibility:hidden" width="100%"
                  src="{{ post.photo.url }}" alt="{{photo.title}}">
             <a href="">
@@ -14,29 +15,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3"></div>
-                            <div class="col-md-6 d-flex flex-row mx-auto" style="margin-top:20%">
-                                {% for rating in post.ratings.all %}
-                                {% if forloop.counter is post.ratings.all.count %}
-                                <div id="design">{{ rating.design_average}}<br>
-                                    <span class="rates">design</span>
-                                </div>
-                                <div id="usable" class="mx-auto">{{ rating.usability_average }}<br>
-                                    <span class="rates">usability</span>
-                                </div>
-                                <div id="contente">{{ rating.content_average }}<br>
-                                    <span class="rates">content</span>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
-                            <div class="col-md-3"></div>
                         </div>
                     </div>
 
                 </div>
             </a>
         </div>
-        <div class="card-body">
+        </div>
+
+        <div class="col-md-6">
             <h5 class="card-title"><strong>{{post.title|title}}</strong>
                 <a href="{{ post.url }}" style="float:right" class="btn btn-sm btn-info mr-4"> Visit </a></h5>
             <p>by <span><a href="{% url 'userprofile' post.user.username %}" id="usern" class="mr-2">{{ post.user.username|title }}</a></span>({{post.user.profile.location}})

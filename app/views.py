@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import SignupForm, UpdateUserForm, UpdateUserProfileForm, PostForm, RatingsForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
-from .models import *
+from .models import Profile, Post, Rating
 from django.contrib.auth.models import User
 import random
 from django.http import HttpResponseRedirect
@@ -13,7 +13,15 @@ from rest_framework import status
 
 
 # Create your views here.
-@login_required(login_url='login')
+
+def home(request):
+    posts = Post.objects.all()
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'rate/home.html', context)
+
+
 def index(request):
     if request.method == "POST":
         form = PostForm(request.POST)

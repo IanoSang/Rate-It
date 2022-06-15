@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border box;
 }
+#nbar{
+    background-color:black;
+    color:black;
+}
 body{
     background-color: #212121;
     color: white;
@@ -10,9 +14,29 @@ body{
 form{
     color: black;
 }
+.box-login, .form{
+    width: 500px;
+}
 .account-img {
     height: 125px;
     width: 125px;
+}
+.overlay{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg
+{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0px;
+    padding:0px;
+}
+.over{
+    background-color: rgba(0,0,0,0.5);
+
 }
 .mi{
     background-position:center;
