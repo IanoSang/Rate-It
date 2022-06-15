@@ -14,6 +14,16 @@ form{
     height: 125px;
     width: 125px;
 }
+.mi{
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.over{
+    background-color: rgba(0,0,0,0.5);
+
+}
 .nav-img{
     height: 35px;
     width: 35px;
