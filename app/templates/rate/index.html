@@ -33,8 +33,9 @@
                         </div>
                   {% endif %}
     </div>
-    <div class="container">
-    {% if posts %}
+    <div class="container mt-5">
+        <div class="container mt-5">
+            {% if posts %}
         {% for post in posts %}
       <div class="card">
         <div class="card-header">
@@ -62,5 +63,7 @@
         {% endfor %}
     {% endif %}
     </div>
+        </div>
+
   </div>
 {% endblock %}
