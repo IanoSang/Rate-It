@@ -24,9 +24,10 @@ def home(request):
 
 def index(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST,  request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
+            print(post)
             post.user = request.user
             post.save()
     else:

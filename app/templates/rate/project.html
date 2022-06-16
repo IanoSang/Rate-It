@@ -25,7 +25,7 @@
 
         <div class="col-md-6">
             <h5 class="card-title"><strong>{{post.title|title}}</strong>
-                <a href="{{ post.url }}" style="float:right" class="btn btn-sm btn-info mr-4"> Visit </a></h5>
+                <a href="{{ post.url }}" style="float:right" class="btn btn-sm btn-info mr-4"> Live Link </a></h5>
             <p>by <span><a href="{% url 'userprofile' post.user.username %}" id="usern" class="mr-2">{{ post.user.username|title }}</a></span>({{post.user.profile.location}})
             </p>
             <p>{{ post.description }}</p>

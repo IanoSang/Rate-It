@@ -43,7 +43,7 @@ class Post(models.Model):
         return f'{self.title}'
 
     class Meta:
-        ordering = ["-pk"]
+        ordering = ["-date"]
 
     def delete_post(self):
         self.delete()
