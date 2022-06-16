@@ -23,10 +23,9 @@ The user rate projects according to design, usability and content creteria.
 
 *****
 ### App Layout
-<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Instagram-Clone/blob/main/static/images/insta1.png">
-<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Instagram-Clone/blob/main/static/images/insta2.png">
-<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Instagram-Clone/blob/main/static/images/insta3.png">
-<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Instagram-Clone/blob/main/static/images/insta4.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Rate-It/blob/main/static/images/rate1.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Rate-It/blob/main/static/images/rate2.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Rate-It/blob/main/static/images/rate3.png">
 
 ## SetUp Instruction
 
