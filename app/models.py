@@ -42,6 +42,9 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.title}'
 
+    class Meta:
+        ordering = ["-pk"]
+
     def delete_post(self):
         self.delete()
 
