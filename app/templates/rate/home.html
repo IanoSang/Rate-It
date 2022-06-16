@@ -31,10 +31,10 @@
           <img src="{{ post.photo.url }}" alt="{{photo.title}}" />
         </div>
         <div class="card-body">
-          <span class="tag tag-purple">
+          <span class="text-center tag tag-purple">
               <a href="{% url 'project' post.title %}"> {{post.title|title}}</a>
           </span>
-          <h4 class="pull-right">
+          <h4 class="pull-right mt-2">
             <a class="btn btn-sm btn-outline-info float-right" href="{{ post.url }}" style=""> View</a>
           </h4>
           <p>

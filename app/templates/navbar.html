@@ -33,36 +33,34 @@
                             </li>
                         </ul>
 
-                        <form class="form-inline ms-auto" target="_self" method="get" action="{% url 'search' %}">
+                        <form class="form-inline pl-5" target="_self" method="get" action="{% url 'search' %}">
                             <div class="form-group">
                                 {% csrf_token %}
-                                <input class="form-control search-field" placeholder="Search" type="text" name="title" id="search-field">
+                                <input class="form-control search-field pl-5" placeholder="Search" type="text" name="title" id="search-field">
                                 <label for="search-field"><i class="fa fa-search"></i></label>
                             </div>
                         </form>
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto pl-5">
                          {% if user.is_authenticated%}
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown ms-auto ml-5">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                                    aria-haspopup="true"
                                    aria-expanded="false">{{ user.username|title }} <img class="rounded-circle nav-img"
                                    src="{{ user.profile.profile_pic.url }}" alt="">
                                 </a>
-                                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="dropdown-menu dropdown-primary ms-auto" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item text-center" href="{% url 'profile' user.username %}">Profile</a>
                                     <hr>
                                     <a class="dropdown-item text-center" href="{% url 'edit' user.username  %}"> Edit profile</a>
                                     <hr>
                                     <a href="{% url 'logout' %}" class="text-secondary text-center dropdown-item">Log Out</a>
-
-
                                 </div>
                             </li>
-                         {% else %}
-                            <span class="navbar-text"> <a href="{% url 'login' %}" class="login">Log In</a></span>
-                            <a class="btn btn-light action-button" role="button" href="{% url 'signup' %}">Sign Up</a>
-                        {% endif %}
-                            <button class="btn btn-info btn-sm pull-right sb" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
+                                 {% else %}
+                                    <span class="navbar-text ms-auto pl-5"> <a href="{% url 'login' %}" class="login">Log In</a></span>
+                                    <a class="btn btn-light action-button ml-5" role="button" href="{% url 'signup' %}">Sign Up</a>
+                                {% endif %}
+                            <button class="btn btn-info btn-sm pull-right ms-auto ml-5" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
                                 Submit your site
                             </button>
                     </ul>

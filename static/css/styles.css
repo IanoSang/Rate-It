@@ -10,10 +10,7 @@ html, body{
     background-color:black;
     color:black;
 }
-.sb{
-    margin-left: 10%;
 
-}
 body{
     background-color: #212121;
     color: white;
@@ -195,7 +192,6 @@ form{
   transition:background-color 0.25s;
   outline:none;
 }
-
 .header-blue .action-button:hover {
   color:#fff;
 }
@@ -206,7 +202,6 @@ form{
 
 .header-blue .navbar .form-inline .search-field {
   display:inline-block;
-  width:80%;
   background:none;
   border:none;
   border-bottom:1px solid transparent;
